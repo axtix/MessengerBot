@@ -1,0 +1,10 @@
+<Project>
+
+    <Target Name="PublishPackageToLocalSource" AfterTargets="Pack" 
+        Condition="'$(PushPackageToLocalSource)' == true And '$(PackagePublishLocalSource)' != '' And '$(IsPackable)' == true And '$(Configuration)' == 'Release'">
+        <Exec Command="dotnet nuget push &quot;$(PackageOutputPath)$(PackageId).$(PackageVersion).nupkg&quot; --source &quot;$(PackagePublishLocalSource)&quot; --skip-duplicate"
+            WorkingDirectory="$(MSBuildProjectDirectory)"
+            StdOutEncoding="utf-8" />
+    </Target>
+
+</Project>

@@ -1,0 +1,8 @@
+<Project>
+
+    <PropertyGroup>
+        <PackagePublishLocalSource>Local</PackagePublishLocalSource>
+        <PushPackageToLocalSource>false</PushPackageToLocalSource>
+    </PropertyGroup>
+
+</Project>
